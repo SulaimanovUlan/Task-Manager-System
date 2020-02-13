@@ -1,0 +1,368 @@
+
+:root{
+    --header_icon_size: 25px;
+    --todo_icon_size: 15px;
+    --add_icon_size: 20px;
+}
+
+.right_part{
+    position: relative;
+    padding: 20px 30px 0px 30px;
+}
+
+.icons{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: var(--header_icon_size);
+    height: var(--header_icon_size);
+    cursor: pointer;
+}
+
+.todo_icons{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: var(--todo_icon_size);
+    height: var(--todo_icon_size);
+    cursor: pointer;
+    transition: transform .5s linear;
+}
+
+
+
+
+
+/*********************************** MENU SECTION **************************************/
+
+.menu{
+    background-image: url(img/menu.svg);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header_line{
+    width: 100%;
+    height: 2px;
+    background-color: #E7FEFE;
+}
+
+.year_target{
+    background-image: url(img/target.svg);
+}
+
+.header_icon_wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.sort_by{
+    background-image: url(img/sort.svg);
+    margin-left: 10px;
+}
+
+/*********************************** TODO SECTION **************************************/
+
+
+.todo_title{
+    font-size: 30px;
+}
+
+.todo_wrapper{
+    background-color: #3E4F56;
+    margin-top: 15px;
+    padding: 7px 5px 7px 15px;
+    border-radius: 10px;
+    font-size: 17px;
+
+}
+
+.todo_control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.show_todo_icon{
+    background-image: url(img/resize.svg);
+}
+
+.show_completed_icon{
+    background-image: url(img/resize.svg);
+}
+
+.gear{
+    width: 20px;
+    height: 20px;
+    background-image: url(/img/gear.svg);
+}
+
+.todo_text_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    margin: 20px 10px 0 0;
+    padding: 5px;
+    background-color: #36424a;
+    -webkit-box-shadow: 16px -3px 22px -6px rgba(32,40,44,1);
+    -moz-box-shadow: 16px -3px 22px -6px rgba(32,40,44,1);
+    box-shadow: 16px -3px 22px -6px rgba(32,40,44,1);
+    border-radius: 5px;
+}
+
+.todo_text_left{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.work_with{
+    width: 20px;
+    height: 20px;
+    background-image: url(img/tick.svg);
+    margin-bottom: 3px;
+    margin-right: 20px;
+}
+
+.hidde{
+    transition: 1s linear;
+    height: 0;
+    display: none;
+    
+}
+
+
+
+.task_block::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+.task_block::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.task_block::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+/*********************************** ADD TASK SECTION **************************************/
+
+
+.add_task_form_wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 35px 90px;
+    color: #266066;
+}
+
+.add_task_form{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    height: 700px;
+}
+
+.add_icons{
+    width: var(--add_icon_size);
+    height: var(--add_icon_size);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.add_item_block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.add_left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    color: black;
+}
+
+.add_left_text{
+    margin-left: 20px;
+}
+
+.add_right_text{
+    font-size: 20px;
+    border: 1px solid dimgray;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+/*********************************** ADD TASK CONTROL SECTION **************************************/
+
+.back_add_icon{
+    background-image: url(img/back.svg);
+    margin: 7px 30px;
+}
+
+
+.remove_add_icon{
+    background-image: url(img/bin.svg);
+    margin: 7px 30px;
+}
+
+.bell_icon{
+    background-image: url(img/bell.svg);
+    width: var(--header_icon_size);
+    height: var(--header_icon_size);
+}
+
+.hour_icon{
+    background-image: url(img/clock.svg);
+    width: var(--header_icon_size);
+    height: var(--header_icon_size);
+}
+
+.add_border{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: #266066;
+}
+
+
+.add_border:hover{
+    background-color: #54AFAB;
+    color: #1C3F3B;
+    border-color: #54AFAB;
+    box-shadow: 0 0 10px #54AFAB, 0 0 40px #54AFAB, 0 0 80px #54AFAB;
+    transition: .3s linear;
+    transform: scale(1.05);
+}
+
+
+/*********************************** TASK AND SUBTASKS **************************************/
+.add_task_name{
+    padding: 15px 0px 0px 0px;
+    border: none;
+    width: 100%;
+    font-size: 30px;
+    line-height: 1.9;
+    /*background-color: #E7FEFE;*/
+    outline: none;
+    color: #2D5D61;
+    margin: 0 auto;
+}
+
+.sub_wrapper{
+    width: 85%;    
+}
+
+.add_sub_task{
+    width: 100%;
+    padding: 0;
+    font-size: 20px;
+}
+
+.sub_task_icon{
+    margin-left: 25px;
+    background-image: url(img/flowchart.svg);
+}
+
+.sub_task_item{
+    border: 3px solid gray;
+    padding: 15px 0px;
+    width: 30%;
+    border-radius: 30px;    
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.set_deadline{
+    width: 45%;
+    border-radius: 5px;
+}
+
+.sub_task_item:hover{
+    transition: .1s linear;
+    transform: translateX(1px) translateY(1px) scale(1.02);
+    -webkit-box-shadow: -8px -5px 23px -6px rgba(82,80,82,1);
+-moz-box-shadow: -8px -5px 23px -6px rgba(82,80,82,1);
+box-shadow: -8px -5px 23px -6px rgba(82,80,82,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

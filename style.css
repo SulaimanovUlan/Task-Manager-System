@@ -1,0 +1,756 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    color: #E7FEFE;
+    font-family: Arial;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.left_part{
+    width: calc(50%);
+    background-color: #3E4F56;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 70px;
+    position: relative;
+}
+
+.right_part{
+    width: calc(50%);
+    background-color: #266066;
+}
+
+
+/*         LEFT PART         */    
+
+    /* Daily Target Section */
+
+.daily_target{
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 110px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #266066;
+    border-radius: 0 20px 20px 0;
+    font-size: 20px;
+    transition: .3s linear;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.daily_target2{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 0;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.daily_target_animation{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #2196f3);
+    transition: 1s;
+}
+
+.daily_target_animation2{
+    background: linear-gradient(270deg, transparent, #2196f3);
+}
+
+
+
+.daily_target > img{
+    width: 30%;
+    margin-bottom: -5px;
+    margin-top: -5px;
+}
+
+.statClick{
+    background-color: green;
+    height: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 0 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+    /* State Title Section */
+#stay_state{
+    font-size: 30px;
+    font-weight: 100;
+    margin-bottom: 15px;
+}
+
+    /* Countdown Timer Section */
+#countDownTimer{
+    font-size: 85px;
+    font-weight: 100;
+}
+
+    /* Timer Circle Section */
+#circle{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 6px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 35px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+#circle:hover{
+    text-shadow: 5px 3px 4px #000000;
+}
+
+.circleWrapperSvg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scale(1.05,1.05) rotateY(-180deg) rotateZ(-90deg);
+}
+
+.circleWrapperSvg > circle{
+    stroke: #54AFAA;
+    fill: none;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-dasharray: 904.32px;
+    stroke-dashoffset: 0px;
+    animation: countdown 0s linear forwards;
+} 
+
+
+    /* Animation Timer Circle */
+@keyframes countdown{
+    from{
+        stroke-dashoffset: 0px;
+    }
+    to{
+        stroke-dashoffset: 904.32px;
+    }
+}
+
+@keyframes countdownup{
+    from{
+        stroke-dashoffset: 0px;
+    }
+    to{
+        stroke-dashoffset: 1570px;
+    }
+}
+
+
+@keyframes countdownless{
+    from{
+        stroke-dashoffset: 0px;
+    }
+    to{
+        stroke-dashoffset: 722.2px;
+    }
+}
+
+
+    /* Timer Controlers Section (trigers)*/
+.timer_control_block{
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+}
+
+#set_timer{
+    background-color: #266066;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 25px;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+}
+
+#abort{
+    background-color: #266066;
+    padding: 20px;
+    border-radius: 20px;
+    width: 45%;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    overflow: hidden;    
+}
+
+#set_timer span:nth-child(1), .timer_cancel span:nth-child(1){
+    position: absolute;
+    display: block;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, transparent, #2196f3);
+}
+
+#abort span:nth-child(1), .timer_set span:nth-child(1){
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+/* main form */
+#set_timer:hover span:nth-child(1){
+    right: 100%;
+    transition: .6s;
+}
+
+#abort:hover span:nth-child(1){
+    left: 100%;
+    transition: .6s;
+}
+
+#set_timer:hover{
+    background-color: #54AFAB;
+    color: #1C3F3B;
+    box-shadow: 0 0 10px #54AFAB, 0 0 40px #54AFAB, 0 0 80px #54AFAB;
+    transition: .4s linear;
+}
+#abort:hover{
+    background-color: #54AFAB;
+    color: #1C3F3B;
+    box-shadow: 0 0 10px #54AFAB, 0 0 40px #54AFAB, 0 0 80px #54AFAB;
+    transition: .4s linear;
+}
+
+/* internal form */
+.timer_cancel:hover span:nth-child(1){
+    right: 100%;
+    transition: .6s;
+}
+
+.timer_set:hover span:nth-child(1){
+    left: 100%;
+    transition: .6s;
+}
+
+.timer_cancel:hover{
+    background-color: #54AFAB;
+    color: #1C3F3B;
+    box-shadow: 0 0 10px #54AFAB, 0 0 40px #54AFAB, 0 0 80px #54AFAB;
+    transition: .4s linear;
+}
+.timer_set:hover{
+    background-color: #54AFAB;
+    color: #1C3F3B;
+    box-shadow: 0 0 10px #54AFAB, 0 0 40px #54AFAB, 0 0 80px #54AFAB;
+    transition: .4s linear;
+}
+
+
+
+    /* Set Timmer Modal Form Section */
+.set_timmer_modal{
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    /*background-color: #E7FEFE;*/
+    padding: 10% 10%;
+    display: none;
+    animation: animatezoom 0.6s;
+}
+
+@keyframes animatezoom{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes animatezoom2{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0);
+    }
+}
+
+
+.set_timer_form{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    padding: 30px 50px;
+    border-radius: 40px;
+}
+
+
+
+    /* Set Goal Section (Input Text)*/
+.set_goal_container{
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.set_goal[type=text]{
+    border: none;
+    width: 230px;
+    font-size: 25px;
+    line-height: 1.9;
+    /*background-color: #E7FEFE;*/
+    outline: none;
+    color: #2D5D61;
+    margin: 0 auto;
+}
+
+
+
+.set_goal_line{
+    width: 100%;
+    height: 1px;
+    background-color: dimgray;
+}
+
+    /* Timer Text Section */
+.timer_value_text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.timer_value_number{
+    font-size: 25px;
+    font-weight: 700;
+    margin-right: 10px;
+    margin-left: 5px;  
+    padding-bottom: 2px;
+}
+
+.timer_value_measure{
+    color: gray;
+    font-style: italic;
+    padding-bottom: 1px;
+}
+
+
+    /* Range Slider Section */
+.volslider{
+    z-index: 2;
+    width: 95%;
+    height: 3px;
+    background-color: dimgray;
+    position: relative;
+    display: flex;
+    
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+#fade{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    outline: none;
+    background-color: #295F60;
+    border-radius: 10px;
+}
+
+
+#fade::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 17px;
+    height: 17px;
+    background-color: #295F60;
+    border-radius: 50%;
+    box-shadow: 0 0 2px #222;
+    cursor: pointer;
+}
+
+.volwraper{
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px 0px 30px 0px;
+}
+
+    /* Repeat Amount Section */
+
+.repeat_checkboxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.repeat_circle{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 3px solid #295F60; 
+}
+
+.checked{
+    background: radial-gradient(ellipse at center,  #295F60 0%,#295F60 0%,#295F60 41%,#ffffff 43%); 
+}
+
+    /* Timer Finish Section*/
+.timer_finish{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+    /* Timer Controlers Section */
+.set_timer_controler{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+    cursor: pointer;
+    
+}
+
+.set_timer_controler > div{
+    width: 45%;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: #266066;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+
+.timer_cancel, .timer_set{
+    overflow: hidden;
+    position: relative;
+}
+
+
+    /* Break Form Section */
+.break{
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.break_img{
+    padding: 15px 0;
+}
+
+.break_animation{
+    
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #2196f3);
+    animation: break_animation 1s;
+}
+
+.celebrate{
+    font-size: 30px;
+    font-weight: 600;
+    color: #54AFAB;
+    margin-bottom: 19px;
+    
+}
+
+.break_text{
+    color: 	#585858;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.control_break{
+    color: dimgray;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.break_controlers{
+    padding: 15px;
+    margin: 5px;
+    width: 80%;
+    cursor: pointer;
+    border: 1px solid #54AFAB;
+    border-radius: 20px;
+}
+
+.break_controlers:hover{
+    transition: .3s;
+    background-color: #54AFAB;
+    color: white;
+}
+
+@keyframes break_animation{
+    from{
+        left: -100%;
+    }
+    to{
+        left: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*   responsive design   */
+
+
+@media screen and (max-width: 1050px){
+    
+    /*.left_part{
+        width: 100%;
+        justify-content: center;
+        padding-top: 0;
+    }*/
+    
+    .set_timmer_modal{
+        width: 100%;
+        padding: 15% 25%;
+    }
+    
+    .right_part{
+        width: 100%;
+    }
+    .left_part{
+        width: 0;
+        height: 0;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .break_controlers{
+        padding: 10px;
+    }
+    
+    .control_break{
+        margin-top: 20px;
+    }
+    .celebrate{
+        font-size: 25px;
+    }
+    
+    .break_text{
+        font-size: 17px;
+    }
+    
+    .break{
+        height: 400px;
+        width: 280px;
+    }
+    
+    .left_part{
+        justify-content: center;
+        padding-top: 0;
+    }
+    .daily_target{
+        width: 70px;
+        height: 40px;
+        font-size: 15px;
+    }
+    .daily_target2{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        border-radius: 0;
+        background-color: red;
+        display: flex;
+        justify-content: space-between;
+        z-index: 100;
+        overflow: hidden;
+    }
+
+    #stay_state{
+        font-size: 17px;
+        margin-bottom: 8px;
+    }
+    #countDownTimer{
+        font-size: 60px;
+        margin-bottom: 6px;
+    }
+    #circle{
+        width: 230px;
+        height: 230px;
+        border: 4px solid gray;
+        margin-bottom: 35px;
+        font-size: 17px;
+    }
+    .timer_control_block{
+        width: 200px;
+    }
+    #set_timer{
+        padding: 11px;    
+        font-size: 15px;
+    }
+    #abort{
+        padding: 11px; 
+        font-size: 15px;
+    }
+    .circleWrapperSvg > circle{
+        stroke-width: 4px;
+        stroke-dasharray:722.2px;
+        animation: countdownless 0s linear forwards;
+    }
+    .set_timmer_modal{
+        padding: 25% 8%;
+    }
+    .set_timer_form{
+        padding: 15px 20px;
+    }
+    .set_goal[type=text]{
+        width: 180px;
+        font-size: 20px;
+    }
+    .repeat_circle{
+        width: 25px;
+        height: 25px;
+    }
+    .set_timer_controler > div{
+        padding: 5px;
+    }
+    .volslider{
+        width: 100%;
+    }
+    .timer_value_measure{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1800px){
+    .left_part{
+        justify-content: center;
+        padding-top: 0;
+    }
+    .daily_target{
+        width: 190px;
+        height: 110px;
+        font-size: 35px;
+    }
+    #stay_state{
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+    #countDownTimer{
+        font-size: 140px;
+    }
+    #circle{
+        width: 500px;
+        height: 500px;
+        border: 10px solid gray;
+        margin-bottom: 55px;
+        font-size: 35px;    
+    }
+    .timer_control_block{
+        width: 550px;
+    }
+    #set_timer{
+        padding: 35px;    
+        font-size: 35px;
+    }
+    #abort{
+        padding: 35px; 
+        font-size: 35px;
+    }
+    .circleWrapperSvg > circle{
+        stroke-width: 10px;
+        stroke-dasharray:1570px;
+        animation: countdownup 0s linear forwards;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

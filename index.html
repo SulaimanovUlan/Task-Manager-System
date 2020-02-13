@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="defaulStyle.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-r.css">
+    <script src="js.js" defer></script>
+    <script src="adjustPage.js" defer></script>
+    <script src="jsFuntions.js"></script>
+</head>
+<body>
+  
+ <div class="container">
+     <div class="parts left_part">
+        
+         <div id="stay_state">Start Work!</div>
+         <div id="countDownTimer">00:00</div>
+         
+         <div id="circle">Hit Me<br>When you are distracted! 
+             <svg class="circDel circleWrapperSvg">
+                 <circle r="140px" cx="144px" cy="144px" id="svgCircle"></circle>
+             </svg>
+         </div>
+         
+         <div class="timer_control_block">
+             <div id="abort">
+                <span></span>
+                 Abort
+             </div>
+             <div id="set_timer">
+                <span></span>
+                 Set Timer
+             </div>
+         </div>
+         
+         <div class="daily_target">
+           <span class="daily_target_animation"></span>
+            <img src="img/timeline.svg" alt="">
+             Statistic
+             <div class="statClick">click me</div>
+         </div>
+         
+         <div class="break">
+             <span></span>
+             <div class="break_img"><img src="img/balloons.svg" alt="" width="100%" height="70px"></div>
+             <div class="celebrate">Let's Celebrate</div>
+             <div class="break_text">
+                 <p>Your pomodoro is over.</p>
+                 <p>It's time for a short break.</p>
+             </div>
+             
+             <div class="control_break">
+                 <div class="break_controlers">Start Long Break</div>
+                 <div class="break_controlers skip_break">Skip Break</div>
+                 <div class="break_controlers short_break">Start Short Break</div>
+             </div>
+             
+         </div>
+         
+     </div>
+     
+   
+     <div class="set_timmer_modal">
+         <form action="#">
+            <div class="set_timer_form">
+                <div class="set_goal_container">
+                   <input class="set_goal" type="text" placeholder="Set Goal (Optional)">
+                   <div class="set_goal_line"></div>
+                </div>
+                
+                <div class="timer_value_text">Work &minus; 
+                   <div class="timer_value_number">15</div> 
+                   <div class="timer_value_measure">Minutes</div>
+                </div>
+                
+                <div class="volwraper">
+                    <div class="volslider">
+                        <input type="range" id="fade" min="0" max="60" step="1" value="15">
+                    </div>
+                </div>
+                
+                <div class="timer_value_text">Repeat &minus; 
+                   <div class="timer_value_measure">No Repeat</div>
+                </div>
+                
+                <div class="repeat_checkboxes">
+                    <div class="repeat_circle"></div>
+                    <div class="repeat_circle"></div>
+                    <div class="repeat_circle"></div>
+                    <div class="repeat_circle"></div>
+                    <div class="repeat_circle"></div>
+                    <div class="repeat_circle"></div>
+                </div>
+                
+                <div class="timer_value_measure timer_finish">Timer will finish at&nbsp; &minus; &nbsp;<div class="finish_at">04:13 PM</div></div>
+                
+                <div class="set_timer_controler">
+                    <div class="timer_cancel"><span></span>CANCEL</div>
+                    <div class="timer_set"><span></span>SET</div>
+                </div>
+                
+            </div>
+         </form>
+     </div>
+     
+     
+     
+     
+     
+     
+    <div class="add_taks">
+         
+     </div>
+     
+     <div class="parts right_part">
+         <header class="header">
+             <div class="menu icons"></div>
+             <div class="todo_title">Today</div>
+             <div class="header_icon_wrapper">
+                <div class="year_target icons"></div>
+                <div class="sort_by icons"></div>
+             </div>
+         </header>
+         <div class="header_line"></div>
+
+         <div class="todo_wrapper">
+           
+            <div class="todo_control">
+                <div class="todo_task_block_text">In Process</div> 
+                <div class="show_todo_icon todo_icons" data-note="inprocess"></div>
+            </div>
+            
+            <div class="header_line"></div>
+            <div class="inprocess task_block">
+                <div class="todo_text_wrapper">
+                <div class="todo_text_left">
+                    <div class="work_with icons"></div> 
+                    <div class="todo_text">Some Text Placeholder</div>
+                </div>
+                <div class="gear icons"></div>
+            </div>
+            <div class="todo_text_wrapper">
+                <div class="todo_text_left">
+                    <div class="work_with icons"></div> 
+                    <div class="todo_text">Some Text Placeholder</div>
+                </div>
+                <div class="gear icons"></div>
+            </div>
+            <div class="todo_text_wrapper">
+                <div class="todo_text_left">
+                    <div class="work_with icons"></div> 
+                    <div class="todo_text">Some Text Placeholder</div>
+                </div>
+                <div class="gear icons"></div>
+            </div>
+            <div class="todo_text_wrapper">
+                <div class="todo_text_left">
+                    <div class="work_with icons"></div> 
+                    <div class="todo_text">Some Text Placeholder</div>
+                </div>
+                <div class="gear icons"></div>
+            </div>
+            <div class="todo_text_wrapper">
+                <div class="todo_text_left">
+                    <div class="work_with icons"></div> 
+                    <div class="todo_text">Some Text Placeholder</div>
+                </div>
+                <div class="gear icons"></div>
+            </div>
+            <div class="todo_text_wrapper">
+                <div class="todo_text_left">
+                    <div class="work_with icons"></div> 
+                    <div class="todo_text">Some Text Placeholder</div>
+                </div>
+                <div class="gear icons"></div>
+            </div>
+            <div class="todo_text_wrapper">
+                <div class="todo_text_left">
+                    <div class="work_with icons"></div> 
+                    <div class="todo_text">Some Text Placeholder</div>
+                </div>
+                <div class="gear icons"></div>
+            </div>
+            </div>
+            
+         </div>
+
+         <div class="todo_wrapper">
+           
+            <div class="todo_control todo_control_completed">
+                <div class="todo_task_block_text">Completed</div> 
+                <div class="show_completed_icon todo_icons" data-note="completed"></div>
+            </div>
+            <div class="header_line"></div>
+            <div class="completed task_block">
+                
+            <div class="todo_text_wrapper">
+                <div class="todo_text_left">
+                    <div class="work_with icons"></div> 
+                    <div class="todo_text">Some Text Placeholder</div>
+                </div>
+                <div class="gear icons"></div>
+            </div>
+            <div class="todo_text_wrapper">
+                <div class="todo_text_left">
+                    <div class="work_with icons"></div> 
+                    <div class="todo_text">Some Text Placeholder</div>
+                </div>
+                <div class="gear icons"></div>
+            </div>
+            <div class="todo_text_wrapper">
+                <div class="todo_text_left">
+                    <div class="work_with icons"></div> 
+                    <div class="todo_text">Some Text Placeholder</div>
+                </div>
+                <div class="gear icons"></div>
+            </div>
+            <div class="todo_text_wrapper">
+                <div class="todo_text_left">
+                    <div class="work_with icons"></div> 
+                    <div class="todo_text">Some Text Placeholder</div>
+                </div>
+                <div class="gear icons"></div>
+            </div>
+            <div class="todo_text_wrapper">
+                <div class="todo_text_left">
+                    <div class="work_with icons"></div> 
+                    <div class="todo_text">Some Text Placeholder</div>
+                </div>
+                <div class="gear icons"></div>
+            </div>
+            <div class="todo_text_wrapper">
+                <div class="todo_text_left">
+                    <div class="work_with icons"></div> 
+                    <div class="todo_text">Some Text Placeholder</div>
+                </div>
+                <div class="gear icons"></div>
+            </div>
+            </div>
+            
+         </div>
+         
+         
+         
+         
+         <div class="add_task_form_wrapper">
+             
+             <div class="add_task_form">
+                 <div class="add_item_block">
+                     <div class="add_left add_border">
+                         <div class="back_add_icon add_icons"></div>
+                     </div>
+                     
+                     <div class="add_right add_border">
+                         <div class="remove_add_icon add_icons"></div>
+                     </div>
+                 </div>
+                 
+                 <input type="text" placeholder="Add Todo/Task. . ." class="add_task_name">
+                 
+                 <div class="add_item_block">
+                     <div class="sub_task_icon add_icons"></div>
+                     <div class="add_right sub_wrapper">
+                         <input type="text" placeholder="Add Todo's Sub Task. . ." class="add_sub_task add_task_name">
+                         <hr>
+                     </div>
+                 </div>
+                 
+                 <div class="add_item_block">
+                    <div class="sub_task_item">Some Text</div>
+                    <div class="sub_task_item">Some Text</div>
+                    <div class="sub_task_item">Some Text</div>
+                 </div>
+                 
+                 <hr>
+                 <div class="add_item_block">
+                   
+                    <div class="add_left">
+                         <div class="bell_icon add_icons"></div>
+                         <div class="add_left_text">Set Reminder Time</div>
+                     </div>
+                     
+                     <div class="add_right">
+                         <div class="add_right_text">Remind Time: 3pm</div>
+                     </div>
+                 </div>
+                 
+                 <hr>
+                 <div class="add_item_block">
+                   
+                    <div class="add_left">
+                         <div class="hour_icon add_icons"></div>
+                         <div class="add_left_text">Set General Hour</div>
+                     </div>
+                     
+                     <div class="add_right">
+                         <div class="add_right_text">Hour Target: 60h</div>
+                     </div>
+                 </div>
+                 
+                 <hr>
+                 <div class="add_item_block">
+                    <div class="set_deadline sub_task_item">DeadLine Start</div>
+                    <div class="set_deadline sub_task_item">DeadLine End</div>
+                 </div>
+                 
+             </div>
+             
+         </div>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+     </div>
+     
+     
+ </div>
+  
+  
+
+</body>
+</html>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
