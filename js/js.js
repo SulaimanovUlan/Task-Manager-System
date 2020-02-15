@@ -133,24 +133,6 @@ class SetTimer{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let timer = new CountUpTimer();
 let timerValue = new SetTimer();
 

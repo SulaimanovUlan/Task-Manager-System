@@ -34,7 +34,7 @@
 /*********************************** MENU SECTION **************************************/
 
 .menu{
-    background-image: url(img/menu.svg);
+    background-image: url(../img/menu.svg);
 }
 
 .header{
@@ -52,7 +52,7 @@
 }
 
 .year_target{
-    background-image: url(img/target.svg);
+    background-image: url(../img/target.svg);
 }
 
 .header_icon_wrapper{
@@ -61,7 +61,7 @@
 }
 
 .sort_by{
-    background-image: url(img/sort.svg);
+    background-image: url(../img/sort.svg);
     margin-left: 10px;
 }
 
@@ -89,17 +89,17 @@
 }
 
 .show_todo_icon{
-    background-image: url(img/resize.svg);
+    background-image: url(../img/resize.svg);
 }
 
 .show_completed_icon{
-    background-image: url(img/resize.svg);
+    background-image: url(../img/resize.svg);
 }
 
 .gear{
     width: 20px;
     height: 20px;
-    background-image: url(/img/gear.svg);
+    background-image: url(../img/gear.svg);
 }
 
 .todo_text_wrapper{
@@ -127,7 +127,7 @@
 .work_with{
     width: 20px;
     height: 20px;
-    background-image: url(img/tick.svg);
+    background-image: url(../img/tick.svg);
     margin-bottom: 3px;
     margin-right: 20px;
 }
@@ -211,24 +211,24 @@
 /*********************************** ADD TASK CONTROL SECTION **************************************/
 
 .back_add_icon{
-    background-image: url(img/back.svg);
+    background-image: url(../img/back.svg);
     margin: 7px 30px;
 }
 
 
 .remove_add_icon{
-    background-image: url(img/bin.svg);
+    background-image: url(../img/bin.svg);
     margin: 7px 30px;
 }
 
 .bell_icon{
-    background-image: url(img/bell.svg);
+    background-image: url(../img/bell.svg);
     width: var(--header_icon_size);
     height: var(--header_icon_size);
 }
 
 .hour_icon{
-    background-image: url(img/clock.svg);
+    background-image: url(../img/clock.svg);
     width: var(--header_icon_size);
     height: var(--header_icon_size);
 }
@@ -276,7 +276,7 @@
 
 .sub_task_icon{
     margin-left: 25px;
-    background-image: url(img/flowchart.svg);
+    background-image: url(../img/flowchart.svg);
 }
 
 .sub_task_item{
